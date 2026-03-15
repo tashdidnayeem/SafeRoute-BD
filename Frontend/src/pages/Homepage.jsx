@@ -130,9 +130,18 @@ const Homepage = () => {
       information trustworthy.
     </p>
 
-    <Link to="/report">
-      <button className="gradient-btn">Create Reports</button>
-    </Link>
+    <div className="report-buttons">
+
+      <Link to="/report">
+        <button className="gradient-btn">Create Report</button>
+      </Link>
+
+      <Link to="/reports">
+        <button className="gradient-btn outline-btn">My Reports</button>
+      </Link>
+
+    </div>
+
   </div>
 </div>
         <div className="feature-card qr-card">
