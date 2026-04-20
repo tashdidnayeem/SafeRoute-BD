@@ -1,0 +1,51 @@
+.latest-alert-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin: 18px 0 24px;
+  color: #17324f;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.latest-alert-left h3 {
+  margin: 0 0 6px;
+}
+
+.latest-alert-left p {
+  margin: 0;
+  max-width: 900px;
+}
+
+.latest-alert-right button {
+  background: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alert-high {
+  background: rgba(255, 77, 77, 0.28);
+  border-left: 8px solid #ff2c2c;
+}
+
+.alert-moderate {
+  background: rgba(255, 211, 77, 0.28);
+  border-left: 8px solid #f0c000;
+}
+
+.alert-low {
+  background: rgba(92, 201, 105, 0.28);
+  border-left: 8px solid #1ca84a;
+}
+
+.severity-tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+}

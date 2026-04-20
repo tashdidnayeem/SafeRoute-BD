@@ -1,0 +1,22 @@
+/* src/views/map.css */
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.map-info {
+  max-width: 260px;
+  display: grid;
+  gap: 0.35rem;
+}

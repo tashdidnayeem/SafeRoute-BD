@@ -1,0 +1,218 @@
+/* Reuses .admin-layout, .admin-sidebar, .admin-main, .admin-banner,
+   .banner-overlay, .summary-cards, .summary-card, .report-table, .badge
+   from adminDashboard.css — no need to duplicate them here */
+
+.analytics-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 20px;
+  flex-wrap: wrap;
+}
+
+.analytics-selectors {
+  display: flex;
+  gap: 12px;
+}
+
+.analytics-select {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #0f3d56;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(15, 61, 86, 0.2);
+  transition: 0.2s ease;
+}
+
+.analytics-select:hover {
+  background: #1a5a7a;
+}
+
+.analytics-select option {
+  background: #0f3d56;
+}
+
+.csv-export-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2fc3ff, #765cff);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 6px 16px rgba(76, 131, 255, 0.28);
+}
+
+.csv-export-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.93;
+}
+
+.analytics-loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: #12344d;
+  font-weight: 600;
+}
+
+/* Two-column grid for city + issue cards */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.analytics-card {
+  background: rgba(31, 97, 141, 0.55);
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 14px rgba(17, 67, 202, 0.18);
+}
+
+.analytics-card.full-width {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}
+
+.analytics-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.analytics-card-title {
+  margin: 0 0 18px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #eaf4ff;
+}
+
+.analytics-card-header .analytics-card-title {
+  margin-bottom: 0;
+}
+
+.risk-count {
+  background: rgba(255, 255, 255, 0.18);
+  color: #eaf4ff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.analytics-empty {
+  color: #cde6f3;
+  font-size: 15px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* City bar chart */
+.city-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.city-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.city-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #eaf4ff;
+}
+
+.city-count {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2fc3ff;
+}
+
+.city-bar-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.city-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2fc3ff, #765cff);
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+/* Issue type list */
+.issue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.issue-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.issue-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #eaf4ff;
+}
+
+.issue-badge {
+  background: linear-gradient(135deg, #2fc3ff, #765cff);
+  color: white;
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Risk table */
+.risk-table-wrap {
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .analytics-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .csv-export-btn {
+    width: 100%;
+  }
+}
